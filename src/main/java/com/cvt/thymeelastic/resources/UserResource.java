@@ -54,7 +54,7 @@ public class UserResource {
     public List<Users> findPageByName(@PathVariable String name){
 
         Page<Users> u=usersRepository.findPageByName(name, new PageRequest(a,3, Sort.Direction.ASC ,"name"));
-        if(a>=u.getTotalPages())
+        if(a>=u.getTotalPages()-1)
             a=0;
         else
         a+=1;

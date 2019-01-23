@@ -58,5 +58,10 @@ public class MainController {
         return "redirect:/users";
     }
 
+    @RequestMapping(value = "/test/page" ,method = RequestMethod.GET)
+    public String pageDataTable(){
+        return "pagination";
+    }
+
 
 }
